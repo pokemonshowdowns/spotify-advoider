@@ -1,0 +1,19 @@
+{
+  "name": "advoider",
+  "description": "super bad spotify ad avoider that refreshes page and goes to next song in playlist when ad pops up b/c ublock doesn't fully work for me",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "icon.png"
+  },
+   "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://open.spotify.com/*"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+ 
+}
